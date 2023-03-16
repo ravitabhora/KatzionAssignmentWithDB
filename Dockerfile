@@ -19,7 +19,7 @@ RUN apt-get update -y && apt-get install -y \
 # Copy the current directory contents into the container at /app
 COPY . /var/www/html
 
-COPY .env.example .env
+COPY .env.example /var/www/html/.env
 # Set up the virtual host for Apache
 
 COPY docker/vhost.conf /etc/apache2/sites-available/000-default.conf
